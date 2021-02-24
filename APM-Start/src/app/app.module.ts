@@ -1,4 +1,4 @@
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,11 +24,10 @@ import { MessageModule } from './messages/message.module';
     ProductModule,
     UserModule,
     MessageModule,
-    RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', component: PageNotFoundComponent }
-    ])
+    ProductModule,
+    UserModule,
+    MessageModule,
+    AppRoutingModule
   ],
   declarations: [AppComponent, WelcomeComponent, PageNotFoundComponent],
   bootstrap: [AppComponent]
